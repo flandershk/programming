@@ -1,0 +1,14 @@
+CXX=g++
+CXXFLAGS=-g
+OBJS=singleton.o
+APP=singleton
+
+$(APP): $(OBJS)
+	$(CXX) $(OBJS) -o $@
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+.PHONY:clean
+clean:
+	rm -rf *.o $(APP) $(OBJS)

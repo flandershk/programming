@@ -1,0 +1,14 @@
+CXX=g++
+CXXFLAGS=-g
+OBJS=iterator_person.o person.o main_person.o
+APP=iterator_person
+
+$(APP): $(OBJS)
+	$(CXX) $(OBJS) -o $@
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+.PHONY:clean
+clean:
+	rm -rf *.o $(APP) $(OBJS)

@@ -1,0 +1,14 @@
+CXX=g++
+CXXFLAGS=-g
+OBJS=command_menu.o
+APP=command_menu
+
+$(APP): $(OBJS)
+	$(CXX) $(OBJS) -o $@
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+.PHONY:clean
+clean:
+	rm -rf *.o $(APP) $(OBJS)

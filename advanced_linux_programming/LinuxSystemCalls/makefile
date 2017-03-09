@@ -1,0 +1,43 @@
+CFLAGS=-g
+EXEC=check-access lock-file print-cpu-times print-time mprotect better_sleep print_symlink copy itimer sysinfo print_uname
+.PHONY: all
+
+all:$(EXEC)
+
+check-access: check-access.c
+	gcc $(CFLAGS) $< -o $@
+
+lock-file: lock-file.c
+	gcc $(CFLAGS) $< -o $@
+
+print-cpu-times: print-cpu-times.c
+	gcc $(CFLAGS) $< -o $@
+
+print-time: print-time.c
+	gcc $(CFLAGS) $< -o $@
+
+mprotect: mprotect.c
+	gcc $(CFLAGS) $< -o $@
+
+better_sleep: better_sleep.c
+	gcc $(CFLAGS) $< -o $@
+
+print_symlink: print_symlink.c
+	gcc $(CFLAGS) $< -o $@
+
+copy: copy.c
+	gcc $(CFLAGS) $< -o $@
+
+itimer: itimer.c
+	gcc $(CFLAGS) $< -o $@
+
+sysinfo: sysinfo.c
+	gcc $(CFLAGS) $< -o $@
+
+print_uname: print_uname.c
+	gcc $(CFLAGS) $< -o $@
+
+.PHONY: clean
+
+clean: 
+	rm -f *.o $(EXEC) *.a

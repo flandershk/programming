@@ -1,0 +1,19 @@
+AddSet Home
+AddPhoto Dinner.jpg
+AddSet Pets
+AddPhoto Dog.jpg
+AddPhoto Cat.jpg
+Find Album
+AddSet Garden
+AddPhoto Spring.jpg
+AddPhoto Summer.jpg
+AddPhoto Flowers.jpg
+AddPhoto Trees.jpg
+Display
+Remove Flowers.jpg
+AddPhoto BetterFlowers.jpg
+Display
+Find Home
+Remove Pets
+Display
+Quit
